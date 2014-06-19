@@ -58,7 +58,7 @@ colstd<-data.frame(colnum=grep("std__",colnames,fixed=TRUE),stringsAsFactors=FAL
 colmean<-data.frame(colnum=grep("mean__",colnames,fixed=TRUE),stringsAsFactors=FALSE)
 neededcols<-rbind(colsubject,colactivity,colstd+2,colmean+2)
 # this selects only those columns with means and std, plus the subject and activity label
-# this generates 10,299 observations of 678 variables
+# this generates 10,299 observations of 68 variables
 HARselected <- HARdatadf[neededcols[order(neededcols$colnum),]]
 # load data manipulation package(s); take the mean of each mean and std column
 library(plyr)
