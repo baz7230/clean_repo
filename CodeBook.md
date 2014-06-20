@@ -20,7 +20,11 @@ VARIABLE: There are 66 mean variables that were measured and captured, the means
 
 MEAN: The average (mean) of each of the variables was calculated, broken out by subject and the activity performed
   The units for the original variables have been normalized by the range of the variables, therefore the
-  means are similarly unit-less; they are means of ratios
+  means are similarly unit-less; they are means of ratios.
+  
+This dataset is tidy and set up for easily comparing ratios, for example by quantiling the mean of each named measurement in
+order to see which averages are highest compared to their range means. 6 distinct activities, 30 distinct subjects, 66 distinct
+measured means, and the the column of pure unitless ratios.
 
 "The features selected come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.
