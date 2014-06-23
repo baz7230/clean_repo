@@ -13,14 +13,15 @@ There are four columns in the tidy dataset
 ACTIVITY: There are 6 activities measured: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
   The variables were measured during these different activities
   
-SUBJECTS: There were 30 subjects in the experiment, anonymously referred to as subject 1 through 30
+SUBJECT: There were 30 subjects in the experiment, anonymously referred to as subject 1 through 30
 
-VARIABLE: There are 66 mean variables that were measured and captured, the means of which were calculated for this tidy dataset.
-  The variables prefixed with 't' are time measurements, those prefixed with 'f' are frequency signals
+MEASUREMENT_NAME: There are 66 mean and std variables that were measured and captured, the means of which
+  were calculated for this tidy dataset.
+  The measurements prefixed with 't' are time measurements, those prefixed with 'f' are frequency signals
 
-MEAN: The average (mean) of each of the variables was calculated, broken out by subject and the activity performed
+AVERAGE_RATIO: The average (mean) of each of the measurements was calculated, broken out by the subject and the activity performed
   The units for the original variables have been normalized by the range of the variables, therefore the
-  means are similarly unit-less; they are means of ratios.
+  measurement means are similarly unit-less: they are means of ratios.
   
 This dataset is tidy and set up for easily comparing ratios, for example by quantiling the mean of each named measurement in
 order to see which averages are highest compared to their range means. 6 distinct activities, 30 distinct subjects, 66 distinct
@@ -87,7 +88,8 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean"
 
-The complete list of variables in the tidy dataset is below. They are all of the means and standard deviations.
+The complete list of variables used to calculate the measured means in the tidy dataset is below.
+They are all of the means and standard deviations.
 I chose to omit the meanFreq() variable.
 
  "tBodyAcc_mean___X"          

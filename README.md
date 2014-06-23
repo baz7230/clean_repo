@@ -73,9 +73,11 @@ tidy_data<-ddply(HARmelt, c("subjects","act_label","variable"), summarise,
 activity_labels[,2]<-as.character(activity_labels[,2])
 tidy_data<-merge(activity_labels,tidy_data,by.x="act_label",by.y="act_label",all=TRUE)
 tidy_data <- subset(tidy_data, select = -c(act_label))
+# give accurate names to the column lists of measurements and average ratios
+names(tidy_data)<-c("activity","subject","measurement_name","average_ratio")
 # see a sample of the tidy dataset in a user-selected order
-tidy_data[order(tidy_data[,3],tidy_data[,1],tidy_data[,2]),][1:40,]
+#tidy_data[order(tidy_data[,3],tidy_data[,1],tidy_data[,2]),][1:40,]
 # write out the new dataset
-write.table(tidy_data,"./data/tidy_data.txt",dec=".",row.names=FALSE)
+#write.table(tidy_data,"./data/tidy_data.txt",dec=".",row.names=FALSE)
 # or write the data in an interesting order: by measurement, then activity, then who did the activity
 write.table(tidy_data[order(tidy_data[,3],tidy_data[,1],tidy_data[,2]),],"./data/tidy_data.txt",dec=".",row.names=FALSE)
