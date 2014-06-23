@@ -27,6 +27,10 @@ This dataset is tidy and set up for easily comparing ratios, for example by quan
 order to see which averages are highest compared to their range means. 6 distinct activities, 30 distinct subjects, 66 distinct
 measured means, and the the column of pure unitless ratios.
 
+There is a discussion by David Hood, a Community TA for the Getting and Cleaning Data class, explaining why "both long and 
+narrow forms [of tidy data] are supported within the question wording." My dataset, clearly, is of the narrow form.
+At this address: https://class.coursera.org/getdata-004/forum/thread?thread_id=262
+
 "The features selected come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ.
 These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.
 Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise.
